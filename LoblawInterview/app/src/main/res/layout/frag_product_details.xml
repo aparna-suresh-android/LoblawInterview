@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable
+            name="viewModel"
+            type="com.app.interview.details.ProductDetailsViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/cart_item_inner_padding">
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="@dimen/prdt_details_img_size"
+            android:layout_height="@dimen/prdt_details_img_size"
+            android:layout_marginLeft="@dimen/cart_prdt_details_margin"
+            app:error="@{@drawable/ic_launcher_background}"
+            app:imageUrl="@{viewModel.product.image}"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:placeholder="@{@drawable/ic_launcher_background}" />
+
+        <TextView
+            android:id="@+id/prdtName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/cart_prdt_details_margin"
+            android:layout_marginTop="@dimen/cart_prdt_details_margin"
+            android:text="@{viewModel.product.name}"
+            android:textSize="@dimen/cart_item_text_size"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/image" />
+
+
+        <TextView
+            android:id="@+id/prdtPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/cart_prdt_details_margin"
+            android:layout_marginTop="@dimen/cart_prdt_details_margin"
+            android:text="@{viewModel.product.price}"
+            android:textSize="@dimen/cart_item_text_size"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/prdtName" />
+
+        <TextView
+            android:id="@+id/prdtType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/cart_prdt_details_margin"
+            android:layout_marginTop="@dimen/cart_prdt_details_margin"
+            android:text="@{viewModel.product.type}"
+            android:textSize="@dimen/cart_item_text_size"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/prdtPrice" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

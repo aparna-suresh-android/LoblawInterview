@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">LoblawInterview</string>
+    <string name="network_error">Network unavailable.Please try again!!!</string>
+</resources>
